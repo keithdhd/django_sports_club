@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teams</title>
+  </head>
+  <nav>
+    <ul>
+      <li>Home</li>
+      <li>
+        <a href="{% url 'teams:new_team' %}">Add new Team</a>
+      </li>
+    </ul>
+  </nav>
+  <body>
+    {% block content %}{% endblock %}
+  </body>
+</html>

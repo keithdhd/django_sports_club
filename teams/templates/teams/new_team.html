@@ -1,0 +1,13 @@
+{% extends "teams/base.html" %} {% block content %}
+
+<!-- Our form goes here -->
+
+<section>
+  <form action="{% url 'teams:create_team' %}" method="POST">
+    {% csrf_token %} {{ new_team_form.as_p }}
+    <button type="submit">Create new Team</button>
+    <a href="{% url 'teams:team_list' %}">Cancel</a>
+  </form>
+</section>
+
+{% endblock %}

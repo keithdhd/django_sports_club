@@ -1,0 +1,15 @@
+{% extends "teams/base.html" %} {% block content %}
+
+<ul>
+  <li>{{ team.name }}</li>
+  <li>{{ team.founded_year }}</li>
+  <li>{{ team.sport }}</li>
+</ul>
+
+<ul>
+  {% for player in team.players.all %}
+  <li>{{ player.first_name }}</li>
+  {% endfor %}
+</ul>
+
+{% endblock %}
